@@ -23,8 +23,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Instructions to run the expense dashboard portal locally
-
+-> Install Node.js v12.16.1
 -> From CMD/Powershell navigate to project root directory
 -> Run 'npm install' to install all the node_modules
 -> Run 'npm run dev' to start the db server and the application
+-> Open http://localhost:4200
+-> Login with username: khushaboo, password: admin@123 OR username: admin, password: admin  
  
