@@ -9,6 +9,7 @@ export class UserService {
 
   existingExpense: any;
   userId: any;
+  private SERVER_URL = `${environment.serverUrl}`;
 
   constructor(private http: HttpClient) { }
 
@@ -19,18 +20,18 @@ export class UserService {
  
     // get all users from api 
   getAll() {
-    return this.http.get<User[]>(`${environment.serverUrl}/users`);
+    return this.http.get<User[]>(`${this.SERVER_URL}/users`);
     }
 
     // get all expenses of a user
   getExpenses() {
     this.getCurrentUser();
-    return this.http.get(`${environment.serverUrl}/user/${this.userId}`);
+    return this.http.get(`${this.SERVER_URL}/user/${this.userId}`);
     }
 
     // create new expense for a user
   createExpense(Expense: Expenses[]) {
     this.getCurrentUser();
-    return this.http.put(`${environment.serverUrl}/user/${this.userId}`, Expense);
+    return this.http.put(`${this.SERVER_URL}/user/${this.userId}`, Expense);
     }
 }
