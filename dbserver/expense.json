@@ -1,0 +1,132 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "firstName": "Khushaboo",
+      "lastName": "Rani",
+      "expense": [
+        {
+          "expenseId": 1001,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Submitted",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        },
+        {
+          "expenseId": 1002,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Under Review",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        },
+        {
+          "expenseId": 1003,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Approved",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        },
+        {
+          "expenseId": 1004,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Rejected",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        },
+        {
+          "expenseId": 1005,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Action required",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Admin",
+      "lastName": "",
+      "expense": [
+        {
+          "expenseId": 2001,
+          "createdDate": "2020-03-23T19:36:31.994Z",
+          "expenseStatus": "Submitted",
+          "expenseDetails": [
+            {
+              "date": "10-03-2020",
+              "type": "Hotel",
+              "description": "Vander valk Hotel Eindhoven",
+              "amount": "150"
+            },
+            {
+              "date": "10-03-2020",
+              "type": "Parking",
+              "description": "Vander valk Hotel Eindhoven Parking",
+              "amount": "10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

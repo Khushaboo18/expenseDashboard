@@ -1,0 +1,65 @@
+<div>
+  <h3>Create new expense request</h3>
+  <!-- Form to enter new expenses-->
+  <form [formGroup]="expenseForm">
+    <table class="table table-hover" formArrayName="expenseDetails">
+      <thead class="thead-light">
+        <tr>
+          <th>Expense Type</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Amount (€)</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of getControls(); let i=index" [formGroupName]="i">
+          <td>
+            <select formControlName="type" class="form-control">
+              <option value="" selected disabled>Select value</option>
+              <option value="Food">Food</option>
+              <option value="Parking">Parking</option>
+              <option value="Hotel">Hotel</option>
+              <option value="Travel">Travel</option>
+              <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+          </td>
+          <td>
+            <textarea rows="1" formControlName="description" type="text" placeholder="Enter description" class="form-control"></textarea>
+          </td>
+          <td>
+            <input formControlName="date" type="date" class="form-control" />
+          </td>
+          <td><input formControlName="amount" type="number" min="0" placeholder="Enter amount" class="form-control" /></td>
+          <td>
+            <!-- Add or remove new expense row-->
+            <button *ngIf="i<1" type="button" (click)="newExpenseEntry()"><i class="fa fa-plus"></i></button>
+            <button *ngIf="i>0" type="button" (click)="deleteExpenseRow(i)"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <button type="submit" data-toggle="modal" [disabled]="loading" data-target="#successModal" (click)="createExpense()">Submit</button>
+  <!-- Modal popup for success or error message-->
+  <div class="modal fade" id="successModal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+        </div>
+        <div *ngIf="error" class="modal-body">
+          <p class="alert alert-danger">
+            <strong>{{error}}</strong>
+          </p>
+        </div>
+        <div *ngIf="submitted" class="modal-body">
+          <p class="alert alert-success">
+            <strong>Expense Submitted!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

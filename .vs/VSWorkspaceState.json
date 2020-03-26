@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\existingExpense",
+    "\\src\\app\\login",
+    "\\src\\app\\_guards",
+    "\\src\\app\\_models",
+    "\\src\\app\\_services",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\dbserver\\expense.json",
+  "PreviewInSolutionExplorer": false
+}

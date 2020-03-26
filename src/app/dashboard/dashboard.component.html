@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-3 menu">
+    <div class="nav flex-column nav-pills">
+      <a class="nav-link active" href="#addExpense" data-toggle="pill">Enter New Expense</a>
+      <a class="nav-link" href="#submitted" data-toggle="pill">View Existing Expense</a>
+    </div>
+  </div>
+  <!-- tab to view or create expenses-->
+  <div class="col-9">
+    <div class="tab-content">
+      <div class="tab-pane" id="submitted"><app-existingExpense [existingExpense]="existingExpense"></app-existingExpense></div>
+      <div class="tab-pane active" id="addExpense"><app-expense [expenseResponse]="existingExpense"></app-expense></div>
+    </div>
+  </div>
+</div>

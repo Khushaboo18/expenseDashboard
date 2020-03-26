@@ -1,0 +1,58 @@
+<div class="container">
+  <!-- table to show all expenses-->
+  <table class="table table-hover" *ngIf="existingExpense">
+    <thead class="thead-light fixedHeader">
+      <tr>
+        <th>Expense Id</th>
+        <th>Created Date</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="scrollContent">
+      <tr *ngFor="let expense of existingExpense.expense">
+        <td>{{expense.expenseId}}</td>
+        <td>{{expense.createdDate | date: 'dd-MM-yyyy' }}</td>
+        <td>{{expense.expenseStatus}}</td>
+        <td><button type="button" data-toggle="modal" (click)="viewExpenseDetails(expense.expenseId)" data-target="#expenseModal"> View Expense</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- Modal popup to show expense details-->
+<div class="modal fade" id="expenseModal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Expense Details</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover" *ngIf="existingExpense">
+          <thead class="thead-light">
+            <tr>
+              <th>Expense Date</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let expense of viewDetails">
+              <td>{{expense.date | date: 'dd-MM-yyyy' }}</td>
+              <td>{{expense.type}}</td>
+              <td>{{expense.description}}</td>
+              <td>{{expense.amount}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
